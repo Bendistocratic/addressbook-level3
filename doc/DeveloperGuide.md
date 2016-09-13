@@ -1,4 +1,4 @@
-# Developer Guide
+k# Developer Guide
 
 * [Setting Up](#setting-up)
 * [Design](#design)
@@ -45,8 +45,10 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | add a new person |
 `* * *` | user | delete a person | remove entries that I no longer need
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
+`* *` | user | modify a person's address | update the person's contact details if necessary
 `* *` | user | hide [private contact details](#private-contact-detail) by default | minimize chance of someone else seeing them by accident
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
+`*` | user with many persons in the address book | sort persons by address | find people who are living in the same area
 
 
 ## Appendix B : Use Cases
@@ -73,6 +75,22 @@ Use case ends.
 
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
+  
+#### Use case: Rename tag
+
+**MSS**
+
+1. User requests person to list persons
+2. Addressbook shows the requested person
+3. User renames the tag of the person
+4. Addressbook asks if tag is correct
+5. Addressbook updates the tag in its database <br>
+
+**Extensions**
+
+2a. The requested person is not found
+
+> Use case ends
 
 ## Appendix C : Non Functional Requirements
 
@@ -80,6 +98,8 @@ Use case ends.
 2. Should be able to hold up to 1000 persons.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
+5. Should be able to import contacts from another file.
+6. Should be able to see last used commands.
 
 ## Appendix D : Glossary
 
