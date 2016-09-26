@@ -158,6 +158,7 @@ public class Parser {
         }
     }
 
+    
     /**
      * Parses arguments in the context of the view command.
      *
@@ -227,6 +228,5 @@ public class Parser {
         final Set<String> keywordSet = new HashSet<>(Arrays.asList(keywords));
         return new FindCommand(keywordSet);
     }
-
 
 }
